@@ -1,0 +1,37 @@
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.101.1"
+
+default_platform :ios
+
+platform :ios do
+
+  desc "This lane will run before execution of other lane."
+  before_all do
+    xcode_location = ENV['XCODE_LOCATION']
+    xcode_select(xcode_location)
+  end
+
+  desc "This lane will ensure that current Xcode version is selected for BreatheMapper project."
+  lane :ensure_xcode_version_for_release do
+    ensure_xcode_version(
+      version: ENV['XCODE_VERSION']
+    )
+  end
+
+  desc "This lane will ensure that current Git branch BreatheMapper project is develop."
+  lane :ensure_git_branch_for_alpha_release do
+    ensure_git_branch(
+      branch: ENV['GIT_BRANCH_FOR_ALPHA_RELEASE']
+    )
+  end
+
+  desc "This lane will ensure that there is no local changes in BreatheMapper project Git Repo."
+  lane :ensure_clean_git_status do
+    ensure_git_status_clean(
+      show_uncommitted_changes: true
+    )
+  end
+
+
+end

@@ -1,0 +1,26 @@
+# app_identifier("[[APP_IDENTIFIER]]") # The bundle identifier of your app
+# apple_id("[[APPLE_ID]]") # Your Apple email address
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
+
+ENV['APP_TARGET'] = "MySpeaker"
+ENV['APP_UNIT_TESTCASES_TARGET'] = "MySpeakerTests"
+ENV['APP_UI_TESTCASES_TARGET'] = "MySpeakerUITests"
+
+
+ENV['PROJ'] = "#{ENV['APP_TARGET']}.xcodeproj"
+ENV['WORKSPACE'] = "#{ENV['APP_TARGET']}.xcworkspace"
+
+
+ENV['DEFAULT_CONFIGURATION'] = "Debug"
+ENV['ADHOC_CONFIGURATION'] = "Adhoc"
+
+
+ENV['XCODE_LOCATION'] = "/Applications/Xcode.app"
+ENV['XCODE_VERSION'] = "9.4.1"
+ENV['SIMULATOR_iOS'] = "OS=%{os},name=%{name}"
+
+
+ENV['GIT_BRANCH_FOR_ALPHA_RELEASE'] = "master"
