@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78058675212287B300C14B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058674212287B300C14B66 /* AppDelegate.swift */; };
+		78058677212287B300C14B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058676212287B300C14B66 /* ViewController.swift */; };
+		7805867A212287B300C14B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78058678212287B300C14B66 /* Main.storyboard */; };
+		7805867D212287B300C14B66 /* MySpeaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7805867B212287B300C14B66 /* MySpeaker.xcdatamodeld */; };
+		7805867F212287B600C14B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7805867E212287B600C14B66 /* Assets.xcassets */; };
+		78058682212287B600C14B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78058680212287B600C14B66 /* LaunchScreen.storyboard */; };
+		7805868D212287B600C14B66 /* MySpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7805868C212287B600C14B66 /* MySpeakerTests.swift */; };
+		78058698212287B600C14B66 /* MySpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058697212287B600C14B66 /* MySpeakerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78058689212287B600C14B66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78058669212287B300C14B66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78058670212287B300C14B66;
+			remoteInfo = MySpeaker;
+		};
+		78058694212287B600C14B66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78058669212287B300C14B66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78058670212287B300C14B66;
+			remoteInfo = MySpeaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78058671212287B300C14B66 /* MySpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78058674212287B300C14B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78058676212287B300C14B66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78058679212287B300C14B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7805867C212287B300C14B66 /* MySpeaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpeaker.xcdatamodel; sourceTree = "<group>"; };
+		7805867E212287B600C14B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78058681212287B600C14B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78058683212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78058688212287B600C14B66 /* MySpeakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpeakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7805868C212287B600C14B66 /* MySpeakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpeakerTests.swift; sourceTree = "<group>"; };
+		7805868E212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78058693212287B600C14B66 /* MySpeakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpeakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78058697212287B600C14B66 /* MySpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpeakerUITests.swift; sourceTree = "<group>"; };
+		78058699212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7805866E212287B300C14B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78058685212287B600C14B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78058690212287B600C14B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78058668212287B300C14B66 = {
+			isa = PBXGroup;
+			children = (
+				78058673212287B300C14B66 /* MySpeaker */,
+				7805868B212287B600C14B66 /* MySpeakerTests */,
+				78058696212287B600C14B66 /* MySpeakerUITests */,
+				78058672212287B300C14B66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78058672212287B300C14B66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78058671212287B300C14B66 /* MySpeaker.app */,
+				78058688212287B600C14B66 /* MySpeakerTests.xctest */,
+				78058693212287B600C14B66 /* MySpeakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78058673212287B300C14B66 /* MySpeaker */ = {
+			isa = PBXGroup;
+			children = (
+				78058674212287B300C14B66 /* AppDelegate.swift */,
+				78058676212287B300C14B66 /* ViewController.swift */,
+				78058678212287B300C14B66 /* Main.storyboard */,
+				7805867E212287B600C14B66 /* Assets.xcassets */,
+				78058680212287B600C14B66 /* LaunchScreen.storyboard */,
+				78058683212287B600C14B66 /* Info.plist */,
+				7805867B212287B300C14B66 /* MySpeaker.xcdatamodeld */,
+			);
+			path = MySpeaker;
+			sourceTree = "<group>";
+		};
+		7805868B212287B600C14B66 /* MySpeakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7805868C212287B600C14B66 /* MySpeakerTests.swift */,
+				7805868E212287B600C14B66 /* Info.plist */,
+			);
+			path = MySpeakerTests;
+			sourceTree = "<group>";
+		};
+		78058696212287B600C14B66 /* MySpeakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78058697212287B600C14B66 /* MySpeakerUITests.swift */,
+				78058699212287B600C14B66 /* Info.plist */,
+			);
+			path = MySpeakerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78058670212287B300C14B66 /* MySpeaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7805869C212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeaker" */;
+			buildPhases = (
+				7805866D212287B300C14B66 /* Sources */,
+				7805866E212287B300C14B66 /* Frameworks */,
+				7805866F212287B300C14B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MySpeaker;
+			productName = MySpeaker;
+			productReference = 78058671212287B300C14B66 /* MySpeaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78058687212287B600C14B66 /* MySpeakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7805869F212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerTests" */;
+			buildPhases = (
+				78058684212287B600C14B66 /* Sources */,
+				78058685212287B600C14B66 /* Frameworks */,
+				78058686212287B600C14B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7805868A212287B600C14B66 /* PBXTargetDependency */,
+			);
+			name = MySpeakerTests;
+			productName = MySpeakerTests;
+			productReference = 78058688212287B600C14B66 /* MySpeakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78058692212287B600C14B66 /* MySpeakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780586A2212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerUITests" */;
+			buildPhases = (
+				7805868F212287B600C14B66 /* Sources */,
+				78058690212287B600C14B66 /* Frameworks */,
+				78058691212287B600C14B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78058695212287B600C14B66 /* PBXTargetDependency */,
+			);
+			name = MySpeakerUITests;
+			productName = MySpeakerUITests;
+			productReference = 78058693212287B600C14B66 /* MySpeakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78058669212287B300C14B66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Manjunath Shivakumara";
+				TargetAttributes = {
+					78058670212287B300C14B66 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					78058687212287B600C14B66 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 78058670212287B300C14B66;
+					};
+					78058692212287B600C14B66 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 78058670212287B300C14B66;
+					};
+				};
+			};
+			buildConfigurationList = 7805866C212287B300C14B66 /* Build configuration list for PBXProject "MySpeaker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78058668212287B300C14B66;
+			productRefGroup = 78058672212287B300C14B66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78058670212287B300C14B66 /* MySpeaker */,
+				78058687212287B600C14B66 /* MySpeakerTests */,
+				78058692212287B600C14B66 /* MySpeakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7805866F212287B300C14B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78058682212287B600C14B66 /* LaunchScreen.storyboard in Resources */,
+				7805867F212287B600C14B66 /* Assets.xcassets in Resources */,
+				7805867A212287B300C14B66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78058686212287B600C14B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78058691212287B600C14B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7805866D212287B300C14B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78058677212287B300C14B66 /* ViewController.swift in Sources */,
+				78058675212287B300C14B66 /* AppDelegate.swift in Sources */,
+				7805867D212287B300C14B66 /* MySpeaker.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78058684212287B600C14B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7805868D212287B600C14B66 /* MySpeakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7805868F212287B600C14B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78058698212287B600C14B66 /* MySpeakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7805868A212287B600C14B66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78058670212287B300C14B66 /* MySpeaker */;
+			targetProxy = 78058689212287B600C14B66 /* PBXContainerItemProxy */;
+		};
+		78058695212287B600C14B66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78058670212287B300C14B66 /* MySpeaker */;
+			targetProxy = 78058694212287B600C14B66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78058678212287B300C14B66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78058679212287B300C14B66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78058680212287B600C14B66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78058681212287B600C14B66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7805869A212287B600C14B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7805869B212287B600C14B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7805869D212287B600C14B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7805869E212287B600C14B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		780586A0212287B600C14B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySpeaker.app/MySpeaker";
+			};
+			name = Debug;
+		};
+		780586A1212287B600C14B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySpeaker.app/MySpeaker";
+			};
+			name = Release;
+		};
+		780586A3212287B600C14B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySpeaker;
+			};
+			name = Debug;
+		};
+		780586A4212287B600C14B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S52777MVT;
+				INFOPLIST_FILE = MySpeakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySpeaker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7805866C212287B300C14B66 /* Build configuration list for PBXProject "MySpeaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7805869A212287B600C14B66 /* Debug */,
+				7805869B212287B600C14B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7805869C212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7805869D212287B600C14B66 /* Debug */,
+				7805869E212287B600C14B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7805869F212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780586A0212287B600C14B66 /* Debug */,
+				780586A1212287B600C14B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		780586A2212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780586A3212287B600C14B66 /* Debug */,
+				780586A4212287B600C14B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7805867B212287B300C14B66 /* MySpeaker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7805867C212287B300C14B66 /* MySpeaker.xcdatamodel */,
+			);
+			currentVersion = 7805867C212287B300C14B66 /* MySpeaker.xcdatamodel */;
+			path = MySpeaker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 78058669212287B300C14B66 /* Project object */;
+}
