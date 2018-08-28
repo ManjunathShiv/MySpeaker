@@ -33,5 +33,58 @@ platform :ios do
     )
   end
 
+  desc "This lane will run unit test-cases of BreatheMapper project."
+  lane :run_unit_test_cases do
+    run_tests(
+      scheme: ENV['APP_TARGET'],
+      configuration: ENV['DEFAULT_CONFIGURATION'],
+      only_testing: ENV['APP_UNIT_TESTCASES_TARGET']
+    )
+  end
+
+  desc "This lane will run UI test-cases of BreatheMapper project."
+  lane :run_ui_test_cases do
+    run_tests(
+      scheme: ENV['APP_TARGET'],
+      configuration: ENV['DEFAULT_CONFIGURATION'],
+      only_testing: ENV['APP_UI_TESTCASES_TARGET']
+    )
+  end
+
+  desc "This lane will run Unit and UI both type test-cases of BreatheMapper project in iOS10 simulator."
+  lane :run_all_test_cases_ios10 do |options|
+    simulator_info = options[:simulator_info]
+    name = (simulator_info.split('|'))[0]
+    os = (simulator_info.split('|'))[1]
+    run_tests(
+      scheme: ENV['APP_TARGET'],
+      configuration: ENV['DEFAULT_CONFIGURATION'],
+      destination: ENV['SIMULATOR_iOS'] % {:name => name, :os => os}
+    )
+  end
+
+  desc "This lane will run Unit and UI both type test-cases of BreatheMapper project in iOS11 simulator."
+  lane :run_all_test_cases_ios11 do |options|
+    simulator_info = options[:simulator_info]
+    name = (simulator_info.split('|'))[0]
+    os = (simulator_info.split('|'))[1]
+    run_tests(
+      scheme: ENV['APP_TARGET'],
+      configuration: ENV['DEFAULT_CONFIGURATION'],
+      destination: ENV['SIMULATOR_iOS'] % {:name => name, :os => os}
+    )
+  end
+
+  desc "This lane will generate code-coverage report of BreatheMapper project."
+  lane :generate_code_coverage_report do
+    slather(
+      scheme: ENV['APP_TARGET'],
+      configuration: ENV['DEFAULT_CONFIGURATION'],
+      proj: ENV['PROJ'],
+      workspace: ENV['WORKSPACE'],
+      output_directory: ENV['CODE_COVERAGE_DIR'],
+      html: true
+    )
+  end
 
 end

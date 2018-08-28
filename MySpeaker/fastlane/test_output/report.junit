@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='MySpeakerUITests.xctest' tests='1' failures='0'>
+  <testsuite name='MySpeakerUITests.MySpeakerUITests' tests='1' failures='0'>
+    <testcase classname='MySpeakerUITests.MySpeakerUITests' name='testExample' time='5.310'/>
+  </testsuite>
+</testsuites>
