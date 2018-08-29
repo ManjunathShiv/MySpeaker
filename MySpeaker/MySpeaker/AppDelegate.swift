@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Branch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let branch: Branch = Branch.getInstance()
+        branch.initSession(launchOptions: launchOptions, andRegisterDeepLinkHandler: {params, error in
+            if error == nil {
+                // params are the deep linked params associated with the link that the user clicked -> was re-directed to this app
+                // params will be empty if no data found
+                // ... insert custom logic here ...
+                print("params: %@", params as? [String: AnyObject] ?? {})
+            }
+        })
+        
+        return true
+    }
+    
+    // Respond to URI scheme links
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        // pass the url to the handle deep link call
+        let branchHandled = Branch.getInstance().application(application,
+                                                             open: url,
+                                                             sourceApplication: sourceApplication,
+                                                             annotation: annotation
+        )
+        if (!branchHandled) {
+            // If not handled by Branch, do other deep link routing for the Facebook SDK, Pinterest SDK, etc
+        }
+        
+        // do other deep link routing for the Facebook SDK, Pinterest SDK, etc
+        return true
+    }
+    
+    // Respond to Universal Links
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        // pass the url to the handle deep link call
+        Branch.getInstance().continue(userActivity)
+        
         return true
     }
 

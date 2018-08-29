@@ -56,6 +56,7 @@
 		78058693212287B600C14B66 /* MySpeakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpeakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78058697212287B600C14B66 /* MySpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpeakerUITests.swift; sourceTree = "<group>"; };
 		78058699212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78153F2F21369632009DF58F /* MySpeaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MySpeaker.entitlements; sourceTree = "<group>"; };
 		8691D297417F8C00A1AB7A2D /* Pods-MySpeakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerTests/Pods-MySpeakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.debug.xcconfig"; sourceTree = "<group>"; };
 		B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		78058673212287B300C14B66 /* MySpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				78153F2F21369632009DF58F /* MySpeaker.entitlements */,
 				78058674212287B300C14B66 /* AppDelegate.swift */,
 				78058676212287B300C14B66 /* ViewController.swift */,
 				78058678212287B300C14B66 /* Main.storyboard */,
@@ -240,6 +242,11 @@
 				TargetAttributes = {
 					78058670212287B300C14B66 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					78058687212287B600C14B66 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -554,6 +561,7 @@
 			baseConfigurationReference = A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MySpeaker/MySpeaker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ254T2RPN;
@@ -576,6 +584,7 @@
 			baseConfigurationReference = B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MySpeaker/MySpeaker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ254T2RPN;
