@@ -58,11 +58,6 @@ This lane will run Unit and UI both type test-cases of BreatheMapper project in 
 fastlane ios generate_code_coverage_report
 ```
 This lane will generate code-coverage report of BreatheMapper project.
-### ios git_reset_overlay_changes
-```
-fastlane ios git_reset_overlay_changes
-```
-This lane will do git-reset for the overlay.
 
 ----
 

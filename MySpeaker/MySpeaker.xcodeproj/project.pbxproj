@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4A08893CCF45439F16ABB0 /* Pods_MySpeakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D887326B70B03F0E14DC163B /* Pods_MySpeakerTests.framework */; };
 		78058675212287B300C14B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058674212287B300C14B66 /* AppDelegate.swift */; };
 		78058677212287B300C14B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058676212287B300C14B66 /* ViewController.swift */; };
 		7805867A212287B300C14B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78058678212287B300C14B66 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		78058682212287B600C14B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78058680212287B600C14B66 /* LaunchScreen.storyboard */; };
 		7805868D212287B600C14B66 /* MySpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7805868C212287B600C14B66 /* MySpeakerTests.swift */; };
 		78058698212287B600C14B66 /* MySpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058697212287B600C14B66 /* MySpeakerUITests.swift */; };
+		9ED4932E46EE15D3DF6D864D /* Pods_MySpeakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66920CCEA2DAB6400B0C413A /* Pods_MySpeakerUITests.framework */; };
+		E397BA0C4B029A99424F9E70 /* Pods_MySpeaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A8DD7FC117735027363A73 /* Pods_MySpeaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48A8DD7FC117735027363A73 /* Pods_MySpeaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpeaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48B795BC0DCB8D2920B8879C /* Pods-MySpeakerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerUITests/Pods-MySpeakerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4AE313246B76DE2C6230F8D2 /* Pods-MySpeakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerTests/Pods-MySpeakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66920CCEA2DAB6400B0C413A /* Pods_MySpeakerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpeakerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78058671212287B300C14B66 /* MySpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78058674212287B300C14B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78058676212287B300C14B66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		78058693212287B600C14B66 /* MySpeakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpeakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78058697212287B600C14B66 /* MySpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpeakerUITests.swift; sourceTree = "<group>"; };
 		78058699212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8691D297417F8C00A1AB7A2D /* Pods-MySpeakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerTests/Pods-MySpeakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.debug.xcconfig"; sourceTree = "<group>"; };
+		B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.release.xcconfig"; sourceTree = "<group>"; };
+		B98CDC5F2BAE90A03A10864D /* Pods-MySpeakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerUITests/Pods-MySpeakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D887326B70B03F0E14DC163B /* Pods_MySpeakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpeakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E397BA0C4B029A99424F9E70 /* Pods_MySpeaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4A08893CCF45439F16ABB0 /* Pods_MySpeakerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED4932E46EE15D3DF6D864D /* Pods_MySpeakerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E4B9927AB14216A0EC605F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48A8DD7FC117735027363A73 /* Pods_MySpeaker.framework */,
+				D887326B70B03F0E14DC163B /* Pods_MySpeakerTests.framework */,
+				66920CCEA2DAB6400B0C413A /* Pods_MySpeakerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78058668212287B300C14B66 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				7805868B212287B600C14B66 /* MySpeakerTests */,
 				78058696212287B600C14B66 /* MySpeakerUITests */,
 				78058672212287B300C14B66 /* Products */,
+				A7226FC3FFA8829E1C2B95AF /* Pods */,
+				5E4B9927AB14216A0EC605F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +155,19 @@
 			path = MySpeakerUITests;
 			sourceTree = "<group>";
 		};
+		A7226FC3FFA8829E1C2B95AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */,
+				B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */,
+				4AE313246B76DE2C6230F8D2 /* Pods-MySpeakerTests.debug.xcconfig */,
+				8691D297417F8C00A1AB7A2D /* Pods-MySpeakerTests.release.xcconfig */,
+				B98CDC5F2BAE90A03A10864D /* Pods-MySpeakerUITests.debug.xcconfig */,
+				48B795BC0DCB8D2920B8879C /* Pods-MySpeakerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7805869C212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeaker" */;
 			buildPhases = (
+				ED8FCE346226982BF1FFF602 /* [CP] Check Pods Manifest.lock */,
 				7805866D212287B300C14B66 /* Sources */,
 				7805866E212287B300C14B66 /* Frameworks */,
 				7805866F212287B300C14B66 /* Resources */,
+				B617BC6041E0D9AA96B9F714 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7805869F212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerTests" */;
 			buildPhases = (
+				5B11B68A251242CA6A0C787A /* [CP] Check Pods Manifest.lock */,
 				78058684212287B600C14B66 /* Sources */,
 				78058685212287B600C14B66 /* Frameworks */,
 				78058686212287B600C14B66 /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 780586A2212287B600C14B66 /* Build configuration list for PBXNativeTarget "MySpeakerUITests" */;
 			buildPhases = (
+				3672D2467C5AC360AA21AD53 /* [CP] Check Pods Manifest.lock */,
 				7805868F212287B600C14B66 /* Sources */,
 				78058690212287B600C14B66 /* Frameworks */,
 				78058691212287B600C14B66 /* Resources */,
@@ -253,6 +297,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3672D2467C5AC360AA21AD53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySpeakerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B11B68A251242CA6A0C787A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySpeakerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B617BC6041E0D9AA96B9F714 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8FCE346226982BF1FFF602 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySpeaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7805866D212287B300C14B66 /* Sources */ = {
@@ -432,17 +551,21 @@
 		};
 		7805869D212287B600C14B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S52777MVT;
+				DEVELOPMENT_TEAM = KZ254T2RPN;
 				INFOPLIST_FILE = MySpeaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.breatheMapperPOC.MySpeaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,17 +573,20 @@
 		};
 		7805869E212287B600C14B66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6S52777MVT;
+				DEVELOPMENT_TEAM = KZ254T2RPN;
 				INFOPLIST_FILE = MySpeaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Manjunath.MySpeaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.breatheMapperPOC.MySpeaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +594,7 @@
 		};
 		780586A0212287B600C14B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE313246B76DE2C6230F8D2 /* Pods-MySpeakerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +616,7 @@
 		};
 		780586A1212287B600C14B66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8691D297417F8C00A1AB7A2D /* Pods-MySpeakerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +638,7 @@
 		};
 		780586A3212287B600C14B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98CDC5F2BAE90A03A10864D /* Pods-MySpeakerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +659,7 @@
 		};
 		780586A4212287B600C14B66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48B795BC0DCB8D2920B8879C /* Pods-MySpeakerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
