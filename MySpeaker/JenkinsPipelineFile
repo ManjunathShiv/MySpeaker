@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def teamEmailList ='manjunath.shivakumara@philips.com'
+def teamEmailList ='manjunath.shivakumara@philips.com,manjunath.sk.85@gmail.com'
 def devTeamEmailList = 'manjunath.shivakumara@philips.com'
 def errors = []
 def shouldSkip = false
