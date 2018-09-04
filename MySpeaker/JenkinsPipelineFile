@@ -6,7 +6,6 @@ def errors = []
 def shouldSkip = false
 
 node {
-#  ansiColor('xterm') {
   try {
       stage('Checkout GitLab CodeBase') {
         def jobBaseName = "${env.JOB_BASE_NAME}".replace('%2F', '/')
@@ -229,5 +228,4 @@ node {
               step([$class: 'WsCleanup', deleteDirs: true, notFailBuild: true])
           }
     }
-#  }
 }
