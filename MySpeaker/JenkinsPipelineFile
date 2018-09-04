@@ -7,7 +7,7 @@ def shouldSkip = false
 
 node {
   try {
-      stage('Checkout GitLab CodeBase') {
+      stage('Checkout GitHub CodeBase') {
         def jobBaseName = "${env.JOB_BASE_NAME}".replace('%2F', '/')
           if (env.BRANCH_NAME != jobBaseName)
             {
@@ -17,7 +17,7 @@ node {
               exit 1
             }
         echo "Branchname  = " + env.BRANCH_NAME
-        checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitLabHTTPS', url: 'https://scm.sapphirepri.com/Mapper/BreatheMapperIos.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHubHTTPS', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
       }
 
       stage('Ensure Git Clean') {
@@ -60,74 +60,13 @@ node {
           '''
       }
 
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Bump Version') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/5-Bump-Version
-            sh bump_version_for_alpha_release.sh "minor"
-            '''
-        }
-      }
-
-      stage('iOS10 Run TestCases') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/6-Run-Test-Cases
-          sh run_all_test_cases_ios10.sh
-          '''
-      }
-
-      stage('iOS10 Test Execution Report') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/7-Test-Execution-Report
-          sh test_execution_report_ios10.sh
-          '''
-          if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'iOS10-TestExecutionReport.html', reportName: 'iOS10-TestExecutionReport'])
-          }
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('iOS10 Update TestCases Result') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/7.2-Update-TestCaseResult
-            sh update_test_case_result_ios10.sh
-            '''
-        }
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('iOS11 Run TestCases') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/6-Run-Test-Cases
-            sh run_all_test_cases_ios11.sh
-            '''
-        }
-
-        stage('iOS11 Test Execution Report') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/7-Test-Execution-Report
-            sh test_execution_report_ios11.sh
-            '''
-            if (!shouldSkip) {
-              publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'iOS11-TestExecutionReport.html', reportName: 'iOS11-TestExecutionReport'])
-            }
-        }
-
-        stage('iOS11 Update TestCases Result') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/7.2-Update-TestCaseResult
-            sh update_test_case_result_ios11.sh
-            '''
-        }
-      }
-
       stage('Code Coverage') {
         sh '''#!/bin/bash -l
           cd Scripts/CI-CD-Scripts/8-Code-Coverage
           sh generate_code_coverage.sh
           '''
           if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/code_coverage', reportFiles: 'index.html', reportName: 'Code Coverage'])
+            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/MySpeaker/fastlane/code_coverage', reportFiles: 'index.html', reportName: 'Code Coverage'])
           }
       }
 
@@ -140,43 +79,6 @@ node {
         }
       }
 
-      if (env.BRANCH_NAME == 'develop') {
-        stage('HockeyApp Upload') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/10-HockeyApp-Upload
-            sh hockeyapp_alpha_build_upload.sh
-            '''
-        }
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Add Git Tag') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/11-Add-Git-Tag
-            sh add_git_tag_for_alpha_release.sh
-            '''
-        }
-      }
-
-      stage('Release Notes') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/12-Release-Notes
-          sh generate_hockeyapp_html_changelog.sh
-          '''
-          if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'Changelog.html', reportName: 'Release Notes'])
-          }
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Commit ipa') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/13-Git-Commit-Ipa
-            sh git_commit_ipa_for_alpha_release.sh
-            '''
-        }
-      }
-
       stage('Record Execution Time') {
         sh '''#!/bin/bash -l
           cd Scripts/CI-CD-Scripts/14-Record-Time
@@ -184,39 +86,6 @@ node {
           '''
       }
 
-      stage('Commit Reports') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/15-Git-Commit-Reports
-          sh git_commit_reports_for_alpha_release.sh
-          '''
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Email Notification') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/16-Email-Notification
-            sh hockeyapp_alpha_release_email_notification.sh
-            '''
-            if (!shouldSkip) {
-              emailext (
-                subject: "Team Stack (BreathMapper) iOS Jenkins Notification",
-                mimeType: 'text/html',
-                body: '${FILE, path="Scripts/CI-CD-Scripts/16-Email-Notification/.hockeyapp_alpha_release_email_notification.html"}',
-                to: teamEmailList,
-                attachmentsPattern: '**/iOS10-TestExecutionReport.html, **/iOS11-TestExecutionReport.html, **/Changelog.html'
-                )
-            }
-        }
-      }
-
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Slack Notification') {
-          sh '''#!/bin/bash -l
-            cd Scripts/CI-CD-Scripts/17-Slack-Notification
-            sh post_hockeyapp_alpha_release_slack_message.sh
-            '''
-        }
-      }
   } catch(err) {
       errors << "errors found: ${err}"
       stage('Email Notification on Fail') {
