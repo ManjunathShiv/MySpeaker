@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-def teamEmailList ='scott.ball@philips.com, yogesh.byndoor@philips.com, Greg.Evans@philips.com, keith.fraser@philips.com, matthew.inman@philips.com, neha.jain@philips.com, kavya.g.kurpad@philips.com, william.lampert@philips.com, panam.leishangthem@philips.com, Bryan.Lynn@philips.com, sivasagar.palakurthy@philips.com, zack.paul@philips.com, manish.rathi@philips.com, jeff.reese@philips.com, jeffrey.shebetich@philips.com, nagaraja.shetty@philips.com, manjunath.shivakumara@philips.com, adam.south@philips.com, vijay.vepakomma@philips.com, ashish.verma@philips.com, paul.borrero@philips.com'
-def devTeamEmailList = 'manish.rathi@philips.com'
+def teamEmailList ='manjunath.shivakumara@philips.com'
+def devTeamEmailList = 'manjunath.shivakumara@philips.com'
 def errors = []
 def shouldSkip = false
 
