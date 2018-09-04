@@ -7,7 +7,7 @@ export LC_ALL=en_US.UTF-8
 
 
 # Move to project folder.
-cd ../MySpeaker/MySpeaker
+cd /Users/Manjunath/MySpeaker
 
 
 echo ""
@@ -18,3 +18,4 @@ echo ""
 
 fastlane ensure_clean_git_status
 exit $?
+
