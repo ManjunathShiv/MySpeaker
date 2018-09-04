@@ -20,23 +20,6 @@ node {
         checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHubHTTPS', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
       }
 
-      stage('Ensure Git Clean') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/2-Ensure-Clean-Git-Status
-          sh ensure_clean_git_status.sh
-          '''
-      }
-
-      stage('Should Skip CI') {
-        sh '''#!/bin/bash -l
-          cd Scripts/CI-CD-Scripts/1-Skip-CI
-          sh record_skip_ci_status.sh
-          '''
-          String skip_ci_status_file_path = "${env.WORKSPACE}/Scripts/CI-CD-Scripts/1-Skip-CI/.skip_ci.txt"
-          String skip_ci_value = ((readFile(skip_ci_status_file_path)).toString()).replaceAll("\\s","")
-          shouldSkip = skip_ci_value == "true" ? true : false
-      }
-
       stage('CI Execution StartTime') {
         sh '''#!/bin/bash -l
           cd Scripts/CI-CD-Scripts/14-Record-Time
