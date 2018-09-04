@@ -1,0 +1,30 @@
+# Important Notice:📌
+# Localization configuration file name should be "LocalizationConfiguration.yml".
+# This file will be used as Input inside Ruby scripts for configurations.
+
+
+
+
+# Sample Template for iOS
+
+import:
+  - excel_file_path: "Source/LocalizationFile/localization.xlsx"
+  - platform: "iOS"
+  - project_resource_folder_path: "../iOSProjectRootFolder/iOSProject/LocalizationResources"
+
+
+
+# Sample Template for Android
+
+import:
+  - excel_file_path: "Source/LocalizationFile/localization.xlsx"
+  - platform: "Android"
+  - project_resource_folder_path: "../AndroidProjectRootFolder/AndroidProject/LocalizationResources"
+
+
+# Sample Template for Export
+
+export:
+  - iOS_project_resource_folder_path: "../../iOSProject/LocalizationResources"
+  - android_project_resource_folder_path: "../../AndroidProject/LocalizationResources"
+  - excel_folder_path: "../LocalizationExcelFile/"

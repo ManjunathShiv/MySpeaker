@@ -1,0 +1,45 @@
+
+
+
+echo ""
+echo "-----------------------------------------------------------------------------------"
+echo "   Build BretheMapper Project & Create .ipa for \"%{ENVIRONMENT}\" environment"
+echo "-----------------------------------------------------------------------------------"
+echo ""
+
+
+
+# Set BMGateway environment, Base-Path Url & Hmac-Key here.
+ENVIRONMENT="%{ENVIRONMENT}"
+URL="%{URL}"
+HMAC_KEY="%{HMAC_KEY}"
+
+
+# Project dirname
+ROOT_DIR=$(dirname $(dirname $(dirname $(pwd))))
+PROJECT_DIR=$(echo "$ROOT_DIR/Source/BreatheMapper")
+
+
+# Update ServerAttributes.swift file.
+ruby 3_update_server_attributes.rb "$PROJECT_DIR" "$URL" "$HMAC_KEY"
+
+
+# Add AppIcon Overlay
+cd ../9.2-AppIcon-Overlay
+sh add_app_icon_overlay.sh $ENVIRONMENT
+cd -
+
+
+# Build BreatheMapper Project & Create Ipa.
+cd ../../../Source/BreatheMapper
+fastlane build_and_create_ipa_for_alpha_release environment:$ENVIRONMENT
+
+# Discard AppIcon Overlay Changes
+fastlane git_reset_overlay_changes
+cd -
+
+
+# Generate CRC32 of ipa file
+cd ../9.1-Genrate-CRC
+sh generate_ipa_file_crc.sh $ENVIRONMENT
+cd -
