@@ -18,7 +18,7 @@ echo "jobBaseName = " + jobBaseName
 exit 1
 }
 echo "Branchname  = " + env.BRANCH_NAME
-checkout([$class: 'GitHub', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
+checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
 }
 
       stage('Ensure Git Clean') {
