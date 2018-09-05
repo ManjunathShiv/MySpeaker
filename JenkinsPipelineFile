@@ -45,10 +45,15 @@ sh record_start_time.sh
 '''
 }
 
-      if (env.BRANCH_NAME == 'develop') {
-        stage('Ensure Git Branch') {
-        }
-      }
+if (env.BRANCH_NAME == 'develop') {
+stage('Ensure Git Branch') {
+sh '''#!/bin/bash -l
+cd Scripts/CI-CD-Scripts/3-Ensure-Git-Branch
+sh ensure_git_branch_for_alpha_release.sh
+'''
+
+}
+}
 
       stage('Ensure Xcode Version') {
 
