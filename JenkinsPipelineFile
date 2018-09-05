@@ -24,7 +24,8 @@ checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerate
 stage('Ensure Git Clean') {
 sh '''#!/bin/bash -l
 cd Scripts/CI-CD-Scripts/2-Ensure-Clean-Git-Status
-sh en
+sh ensure_clean_git_status.sh
+'''
 }
 
       stage('Should Skip CI') {
