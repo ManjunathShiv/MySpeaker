@@ -18,7 +18,7 @@ fi
 
 
 # Move to project folder.
-cd ../../../Source/BreatheMapper
+cd ../../../MySpeaker
 
 
 echo ""
