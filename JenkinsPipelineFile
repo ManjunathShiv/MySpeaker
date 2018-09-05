@@ -28,9 +28,15 @@ sh ensure_clean_git_status.sh
 '''
 }
 
-      stage('Should Skip CI') {
-
-      }
+stage('Should Skip CI') {
+sh '''#!/bin/bash -l
+cd Scripts/CI-CD-Scripts/1-Skip-CI
+sh record_skip_ci_status.sh
+'''
+String skip_ci_status_file_path = "${env.WORKSPACE}/Scripts/CI-CD-Scripts/1-Skip-CI/.skip_ci.txt"
+String skip_ci_value = ((readFile(skip_ci_status_file_path)).toString()).replaceAll("\\s","")
+shouldSkip = skip_ci_value == "true" ? true : false
+}
 
       stage('CI Execution StartTime') {
 
