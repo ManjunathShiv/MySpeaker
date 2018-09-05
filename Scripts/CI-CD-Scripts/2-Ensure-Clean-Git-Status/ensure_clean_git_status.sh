@@ -7,7 +7,7 @@ export LC_ALL=en_US.UTF-8
 
 
 # Move to project folder.
-cd /Users/Manjunath/MySpeaker
+cd ../../../MySpeaker
 
 
 echo ""

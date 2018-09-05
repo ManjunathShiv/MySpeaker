@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-def teamEmailList ='scott.ball@philips.com, yogesh.byndoor@philips.com, Greg.Evans@philips.com, keith.fraser@philips.com, matthew.inman@philips.com, neha.jain@philips.com, kavya.g.kurpad@philips.com, william.lampert@philips.com, panam.leishangthem@philips.com, Bryan.Lynn@philips.com, sivasagar.palakurthy@philips.com, zack.paul@philips.com, manish.rathi@philips.com, jeff.reese@philips.com, jeffrey.shebetich@philips.com, nagaraja.shetty@philips.com, manjunath.shivakumara@philips.com, adam.south@philips.com, vijay.vepakomma@philips.com, ashish.verma@philips.com, paul.borrero@philips.com'
-def devTeamEmailList = 'manish.rathi@philips.com'
+def teamEmailList ='manjunath.shivakumara@philips.com'
+def devTeamEmailList = 'manjunath.shivakumara@philips.com'
 def errors = []
 def shouldSkip = false
 
@@ -18,7 +18,7 @@ node {
               exit 1
             }
         echo "Branchname  = " + env.BRANCH_NAME
-        checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitLabHTTPS', url: 'https://scm.sapphirepri.com/Mapper/BreatheMapperIos.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
       }
 
       stage('Ensure Git Clean') {
@@ -83,7 +83,7 @@ node {
           sh test_execution_report_ios10.sh
           '''
           if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'iOS10-TestExecutionReport.html', reportName: 'iOS10-TestExecutionReport'])
+            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'MySpeaker/fastlane/reports', reportFiles: 'iOS10-TestExecutionReport.html', reportName: 'iOS10-TestExecutionReport'])
           }
       }
 
@@ -110,7 +110,7 @@ node {
             sh test_execution_report_ios11.sh
             '''
             if (!shouldSkip) {
-              publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'iOS11-TestExecutionReport.html', reportName: 'iOS11-TestExecutionReport'])
+              publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'MySpeaker/fastlane/reports', reportFiles: 'iOS11-TestExecutionReport.html', reportName: 'iOS11-TestExecutionReport'])
             }
         }
 
@@ -128,7 +128,7 @@ node {
           sh generate_code_coverage.sh
           '''
           if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/code_coverage', reportFiles: 'index.html', reportName: 'Code Coverage'])
+            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'MySpeaker/fastlane/code_coverage', reportFiles: 'index.html', reportName: 'Code Coverage'])
           }
       }
 
@@ -165,7 +165,7 @@ node {
           sh generate_hockeyapp_html_changelog.sh
           '''
           if (!shouldSkip) {
-            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/BreatheMapper/fastlane/reports', reportFiles: 'Changelog.html', reportName: 'Release Notes'])
+            publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'MySpeaker/fastlane/reports', reportFiles: 'Changelog.html', reportName: 'Release Notes'])
           }
       }
 
