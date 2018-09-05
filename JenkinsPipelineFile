@@ -55,9 +55,12 @@ sh ensure_git_branch_for_alpha_release.sh
 }
 }
 
-      stage('Ensure Xcode Version') {
-
-      }
+stage('Ensure Xcode Version') {
+sh '''#!/bin/bash -l
+cd Scripts/CI-CD-Scripts/4-Ensure-Xcode
+sh ensure_xcode_version_for_release.sh
+'''
+}
 
       if (env.BRANCH_NAME == 'develop') {
         stage('Bump Version') {

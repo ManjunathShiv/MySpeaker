@@ -33,31 +33,26 @@ This lane will ensure that current Git branch BreatheMapper project is develop.
 fastlane ios ensure_clean_git_status
 ```
 This lane will ensure that there is no local changes in BreatheMapper project Git Repo.
-### ios run_unit_test_cases
+### ios basic
 ```
-fastlane ios run_unit_test_cases
+fastlane ios basic
 ```
-This lane will run unit test-cases of BreatheMapper project.
-### ios run_ui_test_cases
+
+### ios test1
 ```
-fastlane ios run_ui_test_cases
+fastlane ios test1
 ```
-This lane will run UI test-cases of BreatheMapper project.
-### ios run_all_test_cases_ios10
+
+### ios test2
 ```
-fastlane ios run_all_test_cases_ios10
+fastlane ios test2
 ```
-This lane will run Unit and UI both type test-cases of BreatheMapper project in iOS10 simulator.
-### ios run_all_test_cases_ios11
+
+### ios test3
 ```
-fastlane ios run_all_test_cases_ios11
+fastlane ios test3
 ```
-This lane will run Unit and UI both type test-cases of BreatheMapper project in iOS11 simulator.
-### ios generate_code_coverage_report
-```
-fastlane ios generate_code_coverage_report
-```
-This lane will generate code-coverage report of BreatheMapper project.
+
 
 ----
 
