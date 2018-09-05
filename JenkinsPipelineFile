@@ -38,9 +38,12 @@ String skip_ci_value = ((readFile(skip_ci_status_file_path)).toString()).replace
 shouldSkip = skip_ci_value == "true" ? true : false
 }
 
-      stage('CI Execution StartTime') {
-
-      }
+stage('CI Execution StartTime') {
+sh '''#!/bin/bash -l
+cd Scripts/CI-CD-Scripts/14-Record-Time
+sh record_start_time.sh
+'''
+}
 
       if (env.BRANCH_NAME == 'develop') {
         stage('Ensure Git Branch') {
