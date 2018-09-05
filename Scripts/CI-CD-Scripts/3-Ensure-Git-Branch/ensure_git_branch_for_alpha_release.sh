@@ -18,7 +18,7 @@ fi
 
 
 # Move to project folder.
-cd /Users/Manjunath/MySpeaker/MySpeaker
+cd ../../../MySpeaker
 
 
 echo ""
