@@ -23,4 +23,4 @@ ENV['XCODE_VERSION'] = "9.4.1"
 ENV['SIMULATOR_iOS'] = "OS=%{os},name=%{name}"
 
 
-ENV['GIT_BRANCH_FOR_ALPHA_RELEASE'] = "master"
+ENV['GIT_BRANCH_FOR_ALPHA_RELEASE'] = "develop"
