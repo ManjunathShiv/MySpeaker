@@ -7,9 +7,19 @@ def shouldSkip = false
 
 node {
   try {
-      stage('Checkout GitLab CodeBase') {
 
-      }
+stage('Checkout GitLab CodeBase') {
+def jobBaseName = "${env.JOB_BASE_NAME}".replace('%2F', '/')
+if (env.BRANCH_NAME != jobBaseName)
+{
+echo "ERROR: Branches DON'T MATCH"
+echo "Branchname  = " + env.BRANCH_NAME
+echo "jobBaseName = " + jobBaseName
+exit 1
+}
+echo "Branchname  = " + env.BRANCH_NAME
+checkout([$class: 'GitHub', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'WipeWorkspace'], [$class: 'LocalBranch'], [$class: 'MessageExclusion', excludedMessage: '.*\\[skip ci\\]|\\[ci skip\\].*']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitHub', url: 'https://github.com/ManjunathShiv/MySpeaker.git']]])
+}
 
       stage('Ensure Git Clean') {
 
