@@ -20,12 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let branch: Branch = Branch.getInstance()
+        
         branch.initSession(launchOptions: launchOptions, andRegisterDeepLinkHandler: {params, error in
             if error == nil {
                 // params are the deep linked params associated with the link that the user clicked -> was re-directed to this app
                 // params will be empty if no data found
                 // ... insert custom logic here ...
                 print("params: %@", params as? [String: AnyObject] ?? {})
+                
+                if error == nil && params!["+clicked_branch_link"] != nil && params!["destination"] as? String == "BranchViewController" {
+                    print("clicked picture link!")
+                    // load the view to show the Destination
+                    let viewController = self.window?.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "MyNavigationController") as! UINavigationController
+                    self.window?.rootViewController = viewController
+                    
+                    let branchViewController = self.window?.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "BranchViewController")
+                    viewController.pushViewController(branchViewController!, animated: false)
+                    
+                    
+                } else {
+                    // load your normal view
+                }
             }
         })
         

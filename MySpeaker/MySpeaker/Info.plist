@@ -19,8 +19,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>philips://MySpeaker</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>MySpeaker</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

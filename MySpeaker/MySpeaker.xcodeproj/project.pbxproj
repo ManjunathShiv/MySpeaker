@@ -16,6 +16,7 @@
 		78058682212287B600C14B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78058680212287B600C14B66 /* LaunchScreen.storyboard */; };
 		7805868D212287B600C14B66 /* MySpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7805868C212287B600C14B66 /* MySpeakerTests.swift */; };
 		78058698212287B600C14B66 /* MySpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78058697212287B600C14B66 /* MySpeakerUITests.swift */; };
+		7886175B21479CA000D7C207 /* BranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886175A21479CA000D7C207 /* BranchViewController.swift */; };
 		9ED4932E46EE15D3DF6D864D /* Pods_MySpeakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66920CCEA2DAB6400B0C413A /* Pods_MySpeakerUITests.framework */; };
 		E397BA0C4B029A99424F9E70 /* Pods_MySpeaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A8DD7FC117735027363A73 /* Pods_MySpeaker.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		78058697212287B600C14B66 /* MySpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpeakerUITests.swift; sourceTree = "<group>"; };
 		78058699212287B600C14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78153F2F21369632009DF58F /* MySpeaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MySpeaker.entitlements; sourceTree = "<group>"; };
+		7886175A21479CA000D7C207 /* BranchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchViewController.swift; sourceTree = "<group>"; };
 		8691D297417F8C00A1AB7A2D /* Pods-MySpeakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeakerTests/Pods-MySpeakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A39DD8FE6382814A76531F42 /* Pods-MySpeaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.debug.xcconfig"; sourceTree = "<group>"; };
 		B404BB7661826BC5B2B9FA00 /* Pods-MySpeaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpeaker/Pods-MySpeaker.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				78153F2F21369632009DF58F /* MySpeaker.entitlements */,
 				78058674212287B300C14B66 /* AppDelegate.swift */,
 				78058676212287B300C14B66 /* ViewController.swift */,
+				7886175A21479CA000D7C207 /* BranchViewController.swift */,
 				78058678212287B300C14B66 /* Main.storyboard */,
 				7805867E212287B600C14B66 /* Assets.xcassets */,
 				78058680212287B600C14B66 /* LaunchScreen.storyboard */,
@@ -387,6 +390,7 @@
 			files = (
 				78058677212287B300C14B66 /* ViewController.swift in Sources */,
 				78058675212287B300C14B66 /* AppDelegate.swift in Sources */,
+				7886175B21479CA000D7C207 /* BranchViewController.swift in Sources */,
 				7805867D212287B300C14B66 /* MySpeaker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

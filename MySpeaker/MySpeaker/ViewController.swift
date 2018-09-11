@@ -17,12 +17,10 @@ class ViewController: UIViewController {
         
         let string = "Hello, World!"
         let utterance = AVSpeechUtterance(string: string)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-UK")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
-        
-//        synthesizer.pauseSpeaking(at: .word)
         
     }
 
